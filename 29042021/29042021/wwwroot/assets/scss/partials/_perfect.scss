@@ -1,0 +1,40 @@
+#perfect{
+    padding: 50px 0;
+
+
+    .image{
+
+        border-radius: 10px;
+        
+        img{
+            box-shadow: 0px 0px 42px -10px rgba(0,0,0,0.75);
+            border-radius: 10px;
+           
+        }
+    }
+
+    .title{
+        p{
+            color: #7E92AC;
+            text-align: left;
+            margin: 0;
+            line-height: 25px;
+        }
+    }
+
+    button.primaryBtn{
+        @extend %primaryBtn
+    }
+};
+
+
+@media only screen and (max-width: 576px){
+    .title{
+
+        margin-top: 5%;
+       h1{
+           font-size: 20px;
+       }
+    }
+
+}

@@ -1,0 +1,24 @@
+#ready{
+    padding: 120px 0;
+    background-image: url("../images/readyBg.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    button.secondaryBtn{
+        @extend %secondaryBtn;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    #ready{
+
+
+        padding: 80px 0;
+        background-size: cover;
+
+        button.secondaryBtn{
+           margin-top: 0!important;
+        }
+    }
+}

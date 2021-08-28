@@ -1,0 +1,45 @@
+#message{
+    padding: 50px 0;
+
+
+    button.primaryBtn{
+        @extend %primaryBtn
+    }
+
+    .drop{
+        input[type=name]{
+            background-color: #EFF2FA;
+        }
+
+        input[type=email]{
+            background-color: #EFF2FA;
+        }
+
+        label[for=email]{
+            margin-top: 10px;
+            margin-left: 5px;
+            font-size: 10px;
+            color: red;
+            display: none;
+        }
+
+        label[for=name]{
+            margin-top: 10px;
+            margin-left: 5px;
+            font-size: 10px;
+            color: red;
+            display: none;
+        }
+
+
+        textarea{
+
+            height: 200px;
+            background-color: #EFF2FA;
+
+            
+        }
+
+        
+    }
+}

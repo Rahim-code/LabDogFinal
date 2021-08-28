@@ -1,0 +1,418 @@
+﻿@using _29042021.ViewModels;
+@using _29042021.Enums;
+
+@model HomeViewModel 
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- section intro starts -->
+<section id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title">
+                    <h1 class="text-white">Discover With New Dashboard</h1>
+                    <p class="text-white">Sed hendrerit metus tortor, quis volutpat en\im gravida imperdiet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 text-center">
+                <div class="buttons">
+                    <button class="btn primaryBtn" type="submit">GET IT NOW</button>
+                    <button class="btn secondaryBtn" type="submit">PLAY VIDEO</button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <img src="~/assets/images/Group 60.png" class="img-fluid">
+            </div>
+        </div>
+        <div class="row mb-5">
+            @foreach (var item in Model.Partners)
+            {
+                <div class="col-lg-3 col-6">
+                    <div class="content">
+                        <img src="~/assets/images/@item.Image" data-hover-img="/assets/images/@item.HoverImage" class="img-fluid">
+                        <h3 class="d-inline">@item.Name</h3>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+
+<!-- sectin intro ends -->
+<!-- section why starts -->
+<section id="why" class="bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="title">
+                    <h1 class="text-dark">Why Choose Us</h1>
+                    <p>
+                        Proin rhoncus, neque sed congue commodo, orci magna tristique
+                        ipsum, vel egestas risus augue quis justo.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row slider">
+            @foreach (var item in Model.Services)
+	         {
+            <div class="col-lg-4">
+                <div class="box">
+                    <div class="icon">
+                        <span data-icon="@Html.Raw(item.Icon)" style="color:@item.IconColor;background-color:@item.IconBackColor;"></span>
+                    </div>
+                    <div class="txt mt-5">
+
+                        <h5 class="font-weight-bold">@item.Title</h5>
+                        <p>
+                            @item.Desc
+                        </p>
+                    </div>
+                </div>
+            </div>
+	         }
+          
+            
+        </div>
+
+    </div>
+</section>
+<!-- section why ends -->
+<!-- section perfect starts -->
+<section id="perfect">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 ">
+                <div class="image">
+                    <img src="~/assets/images/big.jpg" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1 d-flex justify-content-center align-items-center flex-column">
+                <div class="title mb-3">
+                    <h1 class="text-dark text-left">Perfect UX Structure</h1>
+                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui orci, sodales a pellentesque vel, pharetra quis elit. In scelerisque lacinia diam eget egestas. Etiam non dui eu felis vestibulum.</p>
+                </div>
+                <button class="btn primaryBtn align-self-start" type="submit">GET IT NOW</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- section perfect ends -->
+<!-- section ready starts -->
+
+<section id="ready">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title">
+                    <h1 class="text-white mb-5">Ready to Get Started</h1>
+                    <p class="text-white ">
+                        Donec tempor finibus ante ac luctus. Fusce facilisis nisi vel odio tincidunt maximus.
+                        Pellentesque tempus gravida viverra.
+                    </p>
+                </div>
+                <div class="yellow-btn text-center mt-5">
+                    <button class="btn secondaryBtn">GET IT NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section ready ends -->
+<!-- section task starts -->
+
+<section id="task">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 small">
+                <div class="image">
+                    <img src="~/assets/images/big2.jpg" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <div class="list">
+                    <h1>Do Your Task Easily</h1>
+                    <ul class="list-unstyled">
+                        <li><span data-icon="&#xe906;"></span><p>Sodales a pellentesque vel, pharetra quis elit. In scelerisque lacinia diam eget egestas.</p></li>
+                        <li><span data-icon="&#xe906;"></span><p>Sodales a pellentesque vel, pharetra quis elit. In scelerisque lacinia diam eget egestas.</p></li>
+                        <li><span data-icon="&#xe906;"></span><p>Sodales a pellentesque vel, pharetra quis elit. In scelerisque lacinia diam eget egestas.</p></li>
+                    </ul>
+                    <button class="btn primaryBtn">GET IT NOW</button>
+                </div>
+            </div>
+            <div class="col-lg-6 big">
+                <div class="image">
+                    <img src="~/assets/images/big2.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section task ends -->
+<!-- section testimonials starts -->
+
+<section id="testimonials" class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title">
+                    <h1>Testimonials</h1>
+                </div>
+            </div>
+
+        </div>
+        <div class="row mt-5 testimonial-slider">
+
+            @foreach (var item in Model.Testimonials)
+            {
+                <div class="col-lg-4">
+                    <div class="slide-box bg-white">
+                        <div class="image">
+                            <img src="~/assets/images/@item.Image" class="img-fluid">
+                        </div>
+
+                        <div class="txt">
+                            <h5 class="text-center">@item.FullName</h5>
+                            <span class="my-3 d-block text-center">@item.Position, @item.CompanyName</span>
+                            <p class="text-center">@item.Text</p>
+                        </div>
+                        <div class="rating">
+
+                            @for (int i = 0; i < item.Rate; i++)
+                            {
+                                <span class="text-warning" data-icon="&#xe908;"></span>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+<!-- section testimonials ends -->
+<!-- section offer starts -->
+
+<section id="offer">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title">
+                    <h1 class="text-white">We Offer Simple Pricing Plan</h1>
+                    <p class="text-white mt-5"> Donec augue lorem, mollis quis dui sed, dictum vehicula turpis. Aliquam bibendum vel mi id tempor. Sed efficitur scelerisque mi. Nullam posuere nec ex in malesuada.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="row mt-4 slider ">
+            @foreach (var item in Model.Plans)
+            {
+                string planName;
+
+                switch (item.Type)
+                {
+                    case PlanType.Basic:
+                        planName = "Sadə plan";
+                        break;
+                    case PlanType.Premium:
+                        planName = "Premium plan";
+                        break;
+                    default:
+                        planName = "VIP plan";
+                        break;
+                }
+
+              
+                <div class="col-lg-4">
+                    <div class="price  d-flex flex-column align-items-center">
+                        <p>@planName</p>
+                        <span class="d-block currency">$@item.Price</span>
+                        <span class="month py-4">per month / per user</span>
+                        <h6 class="text-center ">For administrators or others requiring full access to all functionality</h6>
+                        <ul class="list-unstyled">
+                            @foreach (var feature in item.PlanFeatures)
+                            {
+                                <li><span data-icon="&#xe906;"></span><p>@feature.Name</p></li>
+                            }
+                        </ul>
+                        <button class="btn primaryBtn ">@(item.Price>0?"FREE TRIAL":"START")</button>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="row d-lg-none d-block mt-5">
+            <div class="col-4 offset-4 ">
+                <div class="sliderBtn d-flex justify-content-between">
+                    <button class="btn prev"><span class="text-white" data-icon="&#xe90c;"></span></button>
+                    <button class="btn next"><span class="text-white" data-icon="&#xe90b;"></span></button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<!-- section offer ends -->
+<!-- section faq starts -->
+<section id="faq" class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title">
+                    <h1>Frequently Asked Questions</h1>
+                    <p class="mt-5">Donec augue lorem, mollis quis dui sed, dictum vehicula turpis. Aliquam bibendum vel mi id tempor. Sed efficitur scelerisque mi. Nullam posuere nec ex in malesuada.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 ques">
+            <div class="col-lg-6">
+                <div class="que d-lg-flex align-items-baseline d-flex">
+                    <div class="icon">
+                        <span data-icon="&#xe907;"></span>
+                    </div>
+                    <div class="txt ml-3">
+                        <h5>Fusce Sodales Placerat Nibh Eget ?</h5>
+                        <p>Duis sagittis orci non risus semper feugiat. Fusce ullamcorper sollicitudin velit et pretium. Ut quis orci sed dolor accumsan ultrices. Nunc ut ornare tellus. Nulla ut eros non lorem rhoncus blandit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="que d-lg-flex align-items-baseline d-flex">
+                    <div class="icon">
+                        <span data-icon="&#xe907;"></span>
+                    </div>
+                    <div class="txt ml-3">
+                        <h5>Fusce Sodales Placerat Nibh Eget ?</h5>
+                        <p>Duis sagittis orci non risus semper feugiat. Fusce ullamcorper sollicitudin velit et pretium. Ut quis orci sed dolor accumsan ultrices. Nunc ut ornare tellus. Nulla ut eros non lorem rhoncus blandit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="que d-lg-flex align-items-baseline d-flex">
+                    <div class="icon">
+                        <span data-icon="&#xe907;"></span>
+                    </div>
+                    <div class="txt ml-3">
+                        <h5>Vestibulum Porttitor Convallis Lectus ?</h5>
+                        <p>Duis sagittis orci non risus semper feugiat. Fusce ullamcorper sollicitudin velit et pretium. Ut quis orci sed dolor accumsan ultrices. Nunc ut ornare tellus. Nulla ut eros non lorem rhoncus blandit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="que d-lg-flex align-items-baseline d-none">
+                    <div class="icon">
+                        <span data-icon="&#xe907;"></span>
+                    </div>
+                    <div class="txt ml-3">
+                        <h5>Vestibulum Porttitor Convallis Lectus ?</h5>
+                        <p>Duis sagittis orci non risus semper feugiat. Fusce ullamcorper sollicitudin velit et pretium. Ut quis orci sed dolor accumsan ultrices. Nunc ut ornare tellus. Nulla ut eros non lorem rhoncus blandit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="que d-lg-flex align-items-baseline d-none">
+                    <div class="icon">
+                        <span data-icon="&#xe907;"></span>
+                    </div>
+                    <div class="txt ml-3">
+                        <h5>Fusce Sodales Placerat Nibh Eget ?</h5>
+                        <p>Duis sagittis orci non risus semper feugiat. Fusce ullamcorper sollicitudin velit et pretium. Ut quis orci sed dolor accumsan ultrices. Nunc ut ornare tellus. Nulla ut eros non lorem rhoncus blandit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="que d-lg-flex align-items-baseline d-none">
+                    <div class="icon">
+                        <span data-icon="&#xe907;"></span>
+                    </div>
+                    <div class="txt ml-3">
+                        <h5>Fusce Sodales Placerat Nibh Eget ?</h5>
+                        <p>Duis sagittis orci non risus semper feugiat. Fusce ullamcorper sollicitudin velit et pretium. Ut quis orci sed dolor accumsan ultrices. Nunc ut ornare tellus. Nulla ut eros non lorem rhoncus blandit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section faq ends -->
+<!-- section message starts -->
+<section id="message">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title">
+                    <h1>Drop A Message</h1>
+                    <p>Donec tempor finibus ante ac luctus. Fusce facilisis nisi vel odio tincidunt maximus. Pellentesque tempus gravida viverra.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="drop">
+                    <form>
+                        <div class="form-group">
+
+                            <input type="name" class="form-control" placeholder="Name">
+                            <label for="name">Type name correctly</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email">
+                            <label for="email">Type email correctly</label>
+                        </div>
+
+                        <div class="form-group">
+
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group text-center">
+                            <button class="btn primaryBtn send">SEND MESSAGE</button>
+
+                        </div>
+
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section message ends -->
+<!-- section ready starts -->
+
+<section id="ready" style="background-image: url('./assets/images/readyBg2.png');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title">
+                    <h1 class="text-white mb-5">Ready to Get Started</h1>
+                    <p class="text-white ">
+                        Donec tempor finibus ante ac luctus. Fusce facilisis nisi vel odio tincidunt maximus.
+                        Pellentesque tempus gravida viverra.
+                    </p>
+                </div>
+                <div class="yellow-btn text-center mt-5">
+                    <button class="btn secondaryBtn">GET IT NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section ready ends -->

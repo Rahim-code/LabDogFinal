@@ -1,0 +1,143 @@
+#offer{
+    padding: 50px 0;
+    background-image: url("../images/bgOffer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    
+
+    
+    .title{
+
+        p{
+            padding: 0 140px;
+        }
+    }
+
+    .price{
+        padding: 25px 50px;
+        border-radius: 10px;
+        background-color: white;
+        @include transition(.3s);
+        cursor: pointer;
+
+        &:hover{
+            background-color: #6837FA;
+            @include transition(.3s);
+
+            p{
+                color: white;
+            }
+
+            .currency{
+                color: white;
+            }
+
+            .month{
+                color:white;
+            }
+
+            h6{
+                color: white;
+            }
+
+            ul{
+
+                li{
+                    span{
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        p{
+            font-size: 18px;
+        }
+
+        .currency{
+            font-size: 45px;
+            font-weight: 500;
+        }
+
+       
+
+        h6{
+            font-size: 13px;
+            line-height: 30px;
+        }
+
+        ul{
+
+            margin: 0;
+            
+            li{
+
+                display: flex;
+                align-items: end;
+                
+
+
+                span{
+
+                    font-size: 15px;
+                    color: $primary-color;
+                    font-weight: 600;
+                }
+
+                p{
+                    font-size: 15px;
+                    color: #7E92AC;
+                    margin-left: 10px;
+                }
+         
+            }
+        }
+
+        button.primaryBtn{
+            @extend %primaryBtn;
+            margin-top: 50px;
+           
+        }
+
+        .notlong{
+            margin-top: 12px!important;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 576px){
+#offer{
+
+    .slick-slide{
+        &:focus{
+            outline: 0;
+        }
+    }
+
+    .price{
+        padding: 10px 10px;
+        
+    }
+    .title{
+
+        p{
+            padding: 0px;
+        }
+    }
+
+    .sliderBtn{
+
+        span{
+            font-size: 30px;
+        }
+
+    }
+
+   
+}
+    
+}

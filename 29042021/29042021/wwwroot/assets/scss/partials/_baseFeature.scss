@@ -1,0 +1,50 @@
+body{
+    font-family: $bodyFont;
+
+    
+}
+
+.title{@include title}
+
+/* icomoon */
+@font-face {
+    font-family: "icomoon";
+    src: url("./../fonts/icomoon/icomoon.eot");
+    src: url("./../fonts/icomoon/icomoon.eot?#iefix") format("embedded-opentype"),
+      url("./../fonts/icomoon/icomoon.woff") format("woff"),
+      url("./../fonts/icomoon/icomoon.ttf") format("truetype"),
+      url("./../fonts/icomoon/icomoon.svg#icomoon") format("svg");
+}
+  
+[data-icon]:before {
+    font-family: "icomoon";
+    content: attr(data-icon);
+}
+
+%primaryBtn{
+    background-color: $primary-color;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+    
+    
+    
+}
+
+
+%secondaryBtn{
+    background-color: $secondary-color;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+}

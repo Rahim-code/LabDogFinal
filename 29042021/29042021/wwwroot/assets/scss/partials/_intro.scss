@@ -1,0 +1,77 @@
+#intro{
+    height: 100%;
+    background-image: url("../images/bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position:top;
+
+    .title{
+        
+        margin-top: 13%
+    }
+
+
+    .buttons{
+
+        button.primaryBtn{
+            @extend %primaryBtn;
+        }
+
+        button.secondaryBtn{
+            @extend %secondaryBtn;
+            margin-left: 40px;
+        }
+
+    }
+
+    .content{
+        cursor: pointer;
+        
+        h3{
+            font-weight: 800;
+            color: #E4E7EC;
+            margin-left: 10px;
+            @include transition(.2s);
+           
+
+            &:hover{
+                
+                @include transition(.2s)
+            }
+        }
+
+
+    }
+}
+
+@media only screen and (max-width: 576px){
+
+    #intro{
+        background-size: 200% 45%;
+
+        .title{
+        
+            margin-top: 25%
+        }
+
+        .buttons{
+            margin-top: 10%;
+
+            display: flex;
+            justify-content: space-evenly;
+
+            button.secondaryBtn{
+          
+                margin-left: 0px;
+            }
+        }
+
+        
+
+        .content{
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+    }
+    
+}

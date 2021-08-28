@@ -1,0 +1,26 @@
+@mixin transition($property){
+    -webkit-transition: $property;
+    -ms-transition: $property;
+    transition: $property;
+}
+
+@mixin title {
+    
+    h1{  
+        
+        font-weight: 700;
+    }
+        
+        
+       
+    p{
+        
+        font-size: 14px;
+        font-weight: 400;
+    };
+
+
+    text-align: center;
+    
+    
+}

@@ -1,0 +1,71 @@
+#up{
+    padding: 50px 0;
+
+    .about{
+        
+        p{
+            color: #7E92AC;
+           
+        }
+    }
+    
+
+    .qlink{
+
+        ul{
+
+            li{
+                margin-top: 15px;
+                color: #7E92AC;
+            }
+        }
+    }
+
+    .email{
+
+        input[type=text]{
+            padding: 23px 0;
+            text-indent: 25px;
+            border-right: 0;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .input-group-text{
+            cursor: pointer;
+            padding-left: 15px;
+
+            border-radius: 10px;
+        }
+
+        ul{
+
+            
+            li{
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+                background-color:#5B2AEE;
+                cursor: pointer;
+
+                
+                span{
+
+                    font-size: 25px;
+                    color: white;
+                }
+
+                &:not(:last-child){
+
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+};
+
+
+
+

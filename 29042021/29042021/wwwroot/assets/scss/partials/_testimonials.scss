@@ -1,0 +1,97 @@
+#testimonials{
+    padding: 50px 0;
+
+
+    .slick-slide{
+        &:focus{
+            outline: 0;
+        }
+    }
+    
+    .slick-list{
+
+        height: 360px;
+    }
+    .slide-box{
+       /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;*/
+            padding: 0px 50px 50px 50px ;
+            border-radius: 10px;
+            box-shadow: 0px 0px 42px -10px rgba(0,0,0,0.25);
+            margin-top: 50px;
+
+            
+       
+        .image{
+
+            display: flex;
+            justify-content: center;
+            img
+            {
+                width: 50px;
+                height: 50px;
+                margin-top: -25px;
+            }
+        }
+        
+
+        .rating{
+            text-align: center;
+        }
+       
+            
+            .txt{
+                h5{
+                    font-weight: 600;
+                    margin-top: 15px;
+                }
+    
+    
+                span{
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: #7E92AC;
+                    margin-bottom: 20px;
+                    
+                }
+    
+                p{
+                    color: #7E92AC;
+                    font-size: 10px;
+                    padding: 0 10px;
+                }
+            }
+        
+        
+    }
+
+    .slick-dots {
+       
+        bottom: -50px;
+    }
+
+    .slick-dots li.slick-active button:before {
+        opacity: .75;
+        color: #6736F9;
+    }
+
+    .slick-dots li button {
+        
+
+        &:before {
+         
+            font-size: 10px;
+            @include transition(.3s);
+            color: #a0c3fa;
+          
+            &:hover{
+                color: #6736F9!important;
+                @include transition(.3s)
+            }
+        }
+    }
+
+
+}
